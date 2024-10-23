@@ -1,9 +1,10 @@
+import UserHeader from "./UserHeader"
 
 
 const Header = ({setIsDark,isDark}) => {
    
   return (
-    <div className="flex justify-center mt-6 mb-12" >
+    <div className="flex flex-col items-center justify-center mt-6 mb-12" >
         {
             isDark ? <img
             onClick={()=>setIsDark(!isDark)} 
@@ -11,7 +12,7 @@ const Header = ({setIsDark,isDark}) => {
              onClick={()=>setIsDark(!isDark)} 
              className="w-4" src="public/light-logo.svg" />
         }
-        
+        <UserHeader />
     </div>
   )
 }
